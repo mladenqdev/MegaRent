@@ -10,7 +10,7 @@
    background-color: $main-red;
    color: #fff;
    text-decoration: none;
-   padding: 0.5rem 2rem;
+   padding: 0.5rem 1.5rem;
    text-transform: uppercase;
 
    &:hover {
@@ -79,7 +79,7 @@ main {
       h1 {
          color: #fff;
          border-bottom: 1px solid $main-red;
-         width: 45%;
+         width: 70%;
          font-size: 3rem;
          font-weight: 400;
       }
@@ -107,6 +107,7 @@ main {
    .showcase-container {
       display: flex;
       margin-top: 2rem;
+      flex-wrap: wrap;
 
       .column {
          display: flex;
@@ -114,14 +115,17 @@ main {
          width: 25%;
          justify-content: center;
          align-items: center;
-         height: 100%;
    
          img {
             width: 90%;
          }
          p {
             margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+         }
+
+         a {
+            font-size: 0.9rem;
          }
       }
    }
@@ -137,6 +141,10 @@ main {
       text-align: center;
       margin-top: 2rem;
       text-transform: uppercase;
+   }
+
+   a {
+      display: none;
    }
 
    table {
@@ -201,7 +209,12 @@ main {
 
       iframe {
          margin-right: 1rem;
+         width: 400px;
+         height: 300px;
       }
    }
 
 }
+
+@include medium-devices;
+@include small-devices;
