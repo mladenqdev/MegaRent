@@ -1,4 +1,207 @@
 @import 'vars';
 @import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@700&display=swap');
 
 @include main;
+
+// UTILITY
+
+.button {
+   background-color: $main-red;
+   color: #fff;
+   text-decoration: none;
+   padding: 0.5rem 2rem;
+   text-transform: uppercase;
+
+   &:hover {
+      background-color: $red_dark;
+   }
+}
+
+// MAIN
+
+main {
+   height: 90vh;
+   background: url('../slike/background.jpg') no-repeat;
+   background-size: cover;
+   padding: 1.5rem 15rem;
+
+   header {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.2rem;
+
+      .logo {
+         font-weight: bold;
+         font-size: 2rem;
+         margin-left: 0.5rem;
+
+         span {
+            color: $main-red;
+         }
+      }
+
+      .main-nav {
+         display: flex;
+         align-items: center;
+         ul {
+            list-style: none;
+            display: flex;
+            
+            li {
+               margin-left: 1.2rem;
+
+               &:last-child {
+                  margin-right: 0.5rem;
+               }
+
+               a {
+                  text-decoration: none;
+                  text-transform: uppercase;
+
+                  &:hover {
+                     color: #000;
+                  }
+               }
+            }
+         }
+      }
+   }
+   .main-titles {
+      height: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+         color: #fff;
+         border-bottom: 1px solid $main-red;
+         width: 45%;
+         font-size: 3rem;
+         font-weight: 400;
+      }
+      h3 {
+         color: #fff;
+         font-weight: 400;
+         font-size: 1.5rem;
+
+      }
+   }
+}
+
+// CATALOG
+
+#catalog {
+   padding: 2.5rem 15rem;
+   background-color: $grey_background;
+
+   h2 {
+      text-align: center;
+      margin-top: 2rem;
+      text-transform: uppercase;
+   }
+
+   .showcase-container {
+      display: flex;
+      margin-top: 2rem;
+
+      .column {
+         display: flex;
+         flex-direction: column;
+         width: 25%;
+         justify-content: center;
+         align-items: center;
+         height: 100%;
+   
+         img {
+            width: 90%;
+         }
+         p {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+         }
+      }
+   }
+
+}
+
+// PRICING
+
+#pricing {
+   padding: 2.5rem 15rem;
+
+   h2 {
+      text-align: center;
+      margin-top: 2rem;
+      text-transform: uppercase;
+   }
+
+   table {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 2rem auto 3rem;
+      text-align: center;
+
+      th, td {
+         padding: 1rem;
+         border-bottom: 1px solid black;
+      }
+
+      td {
+         
+         &:first-child {
+            background-color: $grey_background;
+            font-weight: bold;
+         }
+      }
+      
+      th {
+         background-color: $main-red;
+         color: #fff;
+
+         &:first-child {
+            background-color: $red_dark;
+         }
+      }
+   }
+}
+
+// FOOTER
+
+.footer {
+   padding: 1.5rem 18rem;
+   background-color: #000;
+
+   .logo {
+      font-size: 2rem;
+      margin-left: 0.5rem;
+      border-bottom: 1px solid $main-red;
+
+      span {
+         color: $main-red;
+      }
+   }
+
+
+   .footer-container {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+
+      address {
+         margin-left: 1rem;
+         p {
+            color: #fff;
+         }
+         
+      }
+
+      iframe {
+         margin-right: 1rem;
+      }
+   }
+
+}
